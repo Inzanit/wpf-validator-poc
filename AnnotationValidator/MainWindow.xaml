@@ -1,0 +1,15 @@
+﻿<Window x:Class="AnnotationValidator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnnotationValidator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        d:DataContext="{d:DesignInstance local:MainWindowViewModel}">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" MinWidth="200" Margin="10"/>
+        <TextBox Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" MinWidth="200" Margin="10"/>
+        <Button Content="Validate" Command="{Binding ValidateCommand}" Margin="10"/>
+    </StackPanel>
+</Window>
